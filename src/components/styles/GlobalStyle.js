@@ -20,6 +20,7 @@ const GlobalStyle = createGlobalStyle`
     display: flex;
     flex-direction: column;
     height: 100%;
+    font-family: 'Open Sans', sans-serif;
   }
   #root {
     height: 100%;
