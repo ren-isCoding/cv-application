@@ -10,10 +10,10 @@ export default function CvCreator() {
                     <input placeholder="First name" />
                     <input placeholder="Last Name" />
                     <input placeholder="Profession" />
-                    <input placeholder="Phone Number" />
                     <input placeholder="Email" />
+                    <input placeholder="Phone Number" />
                     <input placeholder="Description" />
-                    <button>Upload Photo</button>
+                    <button className="add-btn">Upload Photo</button>
                 </div>
             </section>
 
@@ -25,6 +25,8 @@ export default function CvCreator() {
                     <input placeholder="Degree" />
                     <input placeholder="Start date" />
                     <input placeholder="End date" />
+                    <button className="remove-btn">Remove</button>
+                    <button className="add-btn">Add</button>
                 </div>
             </section>
 
@@ -36,6 +38,16 @@ export default function CvCreator() {
                     <input placeholder="City" />
                     <input placeholder="Start date" />
                     <input placeholder="End date" />
+                    <button className="remove-btn">Remove</button>
+                    <button className="add-btn">Add</button>
+                </div>
+            </section>
+
+            <section>
+                <h3>Skills</h3>
+                <div className="inputs">
+                    <input type="text" placeholder="What is your specialty?" />
+                    <button className="add-btn">Add</button>
                 </div>
             </section>
         </StyledCvCreator>

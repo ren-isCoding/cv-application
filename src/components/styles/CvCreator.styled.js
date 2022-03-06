@@ -34,5 +34,17 @@ export let StyledCvCreator = styled.div`
     button {
         height: 3rem;
         border-radius: 5px;
+        background-color: #333333;
+        color: whitesmoke;
+        font-weight: bold;
+        transition: 100ms ease-in-out;
+    }
+
+    .remove-btn:hover {
+        color: rgb(218, 39, 39);
+    }
+
+    .add-btn:hover {
+        color: rgb(0, 190, 0);
     }
 `

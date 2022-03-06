@@ -1,14 +1,20 @@
 import styled from "styled-components"
 
 export let StyledCvDisplay = styled.div`
+    position: sticky;
+    top: 7rem;
+
     display: grid;
     grid-template-columns: 6fr 3fr;
     grid-template-rows: 14rem auto;
-    min-width: 80rem;
+
     width: 80rem;
+    height: 110rem;
+
     background: #eeeeee;
     box-shadow: 0px 8px 17px 2px rgba(0, 0, 0, 0.14), 0px 3px 14px 2px rgba(0, 0, 0, 0.12),
         0px 5px 5px -3px rgba(0, 0, 0, 0.2);
+
     @media (max-width: 800px) {
         width: 100%;
         min-width: 100%;
@@ -88,11 +94,8 @@ export let StyledCvDisplay = styled.div`
         flex-direction: column;
     }
 
-    .profile-picture {
-        width: 100%;
-        min-width: 100%;
-        /* padding-bottom: 100%; */
-        background-size: contain;
+    .profile-img {
+        max-height: 40rem;
         margin-bottom: 3rem;
     }
 

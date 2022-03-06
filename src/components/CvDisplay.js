@@ -1,6 +1,7 @@
 import React from "react"
 import { StyledCvDisplay } from "./styles/CvDisplay.styled"
-import profileImg from "../img/pp.png"
+import profileImg from "../img/defaultPp.png"
+import exampleImg from "../img/boris.png"
 
 export default function CvDisplay() {
     return (
@@ -59,8 +60,8 @@ export default function CvDisplay() {
             </div>
 
             <div className="side-info-section">
-                <div className="profile-picture">
-                    <img src={profileImg}></img>
+                <div>
+                    <img src={exampleImg} className="profile-img"></img>
                 </div>
                 <section>
                     <h3>Personal Details</h3>

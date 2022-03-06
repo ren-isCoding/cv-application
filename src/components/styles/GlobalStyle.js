@@ -12,18 +12,16 @@ const GlobalStyle = createGlobalStyle`
   html {
     font-size: 62.5%;
     line-height: 1.6;
-    height: 100%;
   }
   body {
     background-color: white;
     font-size: 1.6rem;
     display: flex;
     flex-direction: column;
-    height: 100%;
     font-family: 'Open Sans', sans-serif;
+    overflow-x: hidden;
   }
   #root {
-    height: 100%;
     display: flex;
     flex-direction: column;
   }
