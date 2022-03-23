@@ -1,25 +1,23 @@
-import React from "react"
+import React, { Component } from "react"
 import { StyledCvDisplay } from "./styles/CvDisplay.styled"
 import profileImg from "../img/defaultPp.png"
 import exampleImg from "../img/boris.png"
 
-export default function CvDisplay() {
+export default function CvDisplay({ state }) {
+    let { fName, lName, profession, description, email, phoneNum } = state
     return (
         <StyledCvDisplay>
             <header>
-                <h1>Name Surname</h1>
-                <span>Web Developer</span>
+                <div>
+                    <h1>{fName ? fName : "Name"}&nbsp;</h1>
+                    <h1>{lName ? lName : "Surname"}</h1>
+                </div>
+                <span>{profession ? profession : "Profession"}</span>
             </header>
             <div className="main-info-section">
                 <section>
                     <h3>Description</h3>
-                    <div className="info-desc">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tempus
-                        imperdiet nisl sed vestibulum. Donec gravida, nulla eget blandit fermentum,
-                        mauris nisi rutrum libero, ac pharetra erat est sit amet tellus. Quisque
-                        fermentum dolor a interdum fermentum. Maecenas vehicula ac ipsum nec
-                        gravida. Integer quis porta turpis. Aenean et metus.
-                    </div>
+                    <div className="info-desc">{description ? description : "Add a short description about yourself"}</div>
                 </section>
 
                 <section>
@@ -67,11 +65,11 @@ export default function CvDisplay() {
                     <h3>Personal Details</h3>
                     <div className="info-details">
                         <span className="info-bold">Email</span>
-                        <span>example123@gmail.com</span>
+                        <span>{email}</span>
                     </div>
                     <div className="info-details">
                         <span className="info-bold">Phone Number</span>
-                        <span>1234567890</span>
+                        <span>{phoneNum}</span>
                     </div>
                 </section>
                 <section>

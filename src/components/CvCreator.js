@@ -1,18 +1,25 @@
 import React from "react"
 import { StyledCvCreator } from "./styles/CvCreator.styled"
 
-export default function CvCreator() {
+export default function CvCreator({ setState }) {
+    let handleChange = (e) => {
+        let { name, value } = e.target
+        setState((prevState) => ({
+            ...prevState,
+            [name]: value,
+        }))
+    }
     return (
-        <StyledCvCreator>
+        <StyledCvCreator onChange={(e) => handleChange(e)}>
             <section>
                 <h3>Personal Information</h3>
                 <div className="inputs">
-                    <input placeholder="First name" />
-                    <input placeholder="Last Name" />
-                    <input placeholder="Profession" />
-                    <input placeholder="Email" />
-                    <input placeholder="Phone Number" />
-                    <input placeholder="Description" />
+                    <input placeholder="First name" name="fName" />
+                    <input placeholder="Last Name" name="lName" />
+                    <input placeholder="Profession" name="profession" />
+                    <input placeholder="Email" name="email" />
+                    <input placeholder="Phone Number" name="phoneNum" />
+                    <input placeholder="Description" name="description" />
                     <button className="add-btn">Upload Photo</button>
                 </div>
             </section>

@@ -2,7 +2,7 @@ import styled from "styled-components"
 
 export let StyledCvDisplay = styled.div`
     position: sticky;
-    top: 7rem;
+    top: 0rem;
 
     display: grid;
     grid-template-columns: 6fr 3fr;
@@ -12,8 +12,9 @@ export let StyledCvDisplay = styled.div`
     height: 110rem;
 
     background: #eeeeee;
-    box-shadow: 0px 8px 17px 2px rgba(0, 0, 0, 0.14), 0px 3px 14px 2px rgba(0, 0, 0, 0.12),
-        0px 5px 5px -3px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 8px 17px 2px rgba(0, 0, 0, 0.14), 0px 3px 14px 2px rgba(0, 0, 0, 0.12), 0px 5px 5px -3px rgba(0, 0, 0, 0.2);
+
+    overflow: hidden;
 
     @media (max-width: 800px) {
         width: 100%;
@@ -31,6 +32,10 @@ export let StyledCvDisplay = styled.div`
         color: whitesmoke;
         padding: 3rem;
         grid-column: 1/ -1;
+
+        div {
+            display: flex;
+        }
 
         h1 {
             font-weight: 900;
@@ -92,6 +97,7 @@ export let StyledCvDisplay = styled.div`
         padding: 2rem;
         display: flex;
         flex-direction: column;
+        overflow: hidden;
     }
 
     .profile-img {
