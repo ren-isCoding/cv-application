@@ -1,17 +1,20 @@
 import React, { Component } from "react"
-import { StyledCvDisplay } from "./styles/CvDisplay.styled"
-import profileImg from "../img/defaultPp.png"
-import exampleImg from "../img/boris.png"
+import { StyledCvDisplay } from "../styles/CvPreview.styled"
+import profileImg from "../assets/defaultPp.png"
+import exampleImg from "../assets/boris.png"
 
-export default function CvDisplay({ state }) {
-    let { fName, lName, profession, description, email, phoneNum } = state
+export default function CvPreview({ value }) {
+    let { fName, lName, profession, email, phoneNum, description } = value
+    let { school, schoolCity, degree, schoolStart, schoolEnd } = value
+    let { job, company, jobCity, jobStart, jobEnd } = value
+    let { skill } = value
+
     return (
         <StyledCvDisplay>
             <header>
-                <div>
-                    <h1>{fName ? fName : "Name"}&nbsp;</h1>
-                    <h1>{lName ? lName : "Surname"}</h1>
-                </div>
+                <h1>
+                    {fName ? fName : "Name"} {lName ? lName : "Surname"}
+                </h1>
                 <span>{profession ? profession : "Profession"}</span>
             </header>
             <div className="main-info-section">
@@ -23,10 +26,14 @@ export default function CvDisplay({ state }) {
                 <section>
                     <h3>Education</h3>
                     <div className="info-wrapper">
-                        <span className="info-date">2015 - 2020</span>
+                        <span className="info-date">
+                            {schoolStart ? schoolStart : "From"} - {schoolEnd ? schoolEnd : "To"}
+                        </span>
                         <div className="info-details">
-                            <span className="info-bold">Computer Science University, City</span>
-                            <span>Master in CS</span>
+                            <span className="info-bold">
+                                {school ? school : "School"}, {schoolCity ? schoolCity : "City"}
+                            </span>
+                            <span>{degree ? degree : "Degree"}</span>
                         </div>
                     </div>
                     <div className="info-wrapper">
@@ -41,10 +48,14 @@ export default function CvDisplay({ state }) {
                 <section>
                     <h3>Experience</h3>
                     <div className="info-wrapper">
-                        <span className="info-date">2015 - Present</span>
+                        <span className="info-date">
+                            {jobStart ? jobStart : "From"} - {jobEnd ? jobEnd : "To"}
+                        </span>
                         <div className="info-details">
-                            <span className="info-bold">Junior Web Developer</span>
-                            <span>Facebook, City</span>
+                            <span className="info-bold">{job ? job : "Job profession"}</span>
+                            <span>
+                                {company ? company : "Company name"}, {jobCity ? jobCity : "City"}
+                            </span>
                         </div>
                     </div>
                     <div className="info-wrapper">
@@ -75,6 +86,7 @@ export default function CvDisplay({ state }) {
                 <section>
                     <h3>Skills</h3>
                     <ul className="skills-list">
+                        <li>{skill}</li>
                         <li>Programming</li>
                         <li>Photoshop</li>
                         <li>Teamwork</li>
