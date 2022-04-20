@@ -4,10 +4,10 @@ import profileImg from "../assets/defaultPp.png"
 import exampleImg from "../assets/boris.png"
 
 export default function CvPreview({ value }) {
-    let { fName, lName, profession, email, phoneNum, description } = value
-    let { school, schoolCity, degree, schoolStart, schoolEnd } = value
-    let { job, company, jobCity, jobStart, jobEnd } = value
-    let { skill } = value
+    const { fName, lName, profession, email, phoneNum, description } = value
+    const { school, schoolCity, degree, schoolStart, schoolEnd } = value
+    const { job, company, jobCity, jobStart, jobEnd } = value
+    const { skill } = value
 
     return (
         <StyledCvDisplay>

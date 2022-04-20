@@ -5,20 +5,20 @@ import ExperienceForm from "./ExperienceForm"
 
 export default function CvForm({ setValue }) {
     function handleChange(e) {
-        let { name, value } = e.target
+        const { name, value } = e.target
         setValue((prevState) => ({
             ...prevState,
             [name]: value,
         }))
     }
 
-    let [education, setEducation] = useState([])
-    let [experience, setExperience] = useState([])
+    const [education, setEducation] = useState([])
+    const [experience, setExperience] = useState([])
 
-    let addEducationForm = (e) => {
+    const addEducationForm = (e) => {
         setEducation(education.concat(<EducationForm key={education.length} />))
     }
-    let addExperienceForm = (e) => {
+    const addExperienceForm = (e) => {
         setExperience(experience.concat(<ExperienceForm key={experience.length} />))
     }
 
