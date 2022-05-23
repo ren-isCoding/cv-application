@@ -1,6 +1,6 @@
 import styled from "styled-components"
 
-export let StyledCvDisplay = styled.div`
+export let StyledCvPreview = styled.div`
     position: sticky;
     top: 0rem;
 
@@ -12,7 +12,8 @@ export let StyledCvDisplay = styled.div`
     height: 110rem;
 
     background: #eeeeee;
-    box-shadow: 0px 8px 17px 2px rgba(0, 0, 0, 0.14), 0px 3px 14px 2px rgba(0, 0, 0, 0.12), 0px 5px 5px -3px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 8px 17px 2px rgba(0, 0, 0, 0.14), 0px 3px 14px 2px rgba(0, 0, 0, 0.12),
+        0px 5px 5px -3px rgba(0, 0, 0, 0.2);
 
     overflow: hidden;
 
