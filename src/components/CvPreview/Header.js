@@ -1,7 +1,7 @@
 import React from "react"
 
-export default function HeaderPreview({ personal }) {
-    const { fName, lName, profession } = personal
+export default function HeaderPreview({ cv }) {
+    const { fName, lName, profession } = cv.personalInfo
     return (
         <header>
             <h1>

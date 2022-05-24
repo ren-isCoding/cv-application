@@ -7,9 +7,9 @@ import SideInfo from "./SideInfo"
 export default function CvPreview({ cv }) {
     return (
         <StyledCvPreview>
-            <Header personal={cv.personalInfo} />
-            <MainInfo personal={cv.personalInfo} />
-            <SideInfo />
+            <Header cv={cv} />
+            <MainInfo cv={cv} />
+            <SideInfo cv={cv} />
         </StyledCvPreview>
     )
 }

@@ -1,6 +1,6 @@
 import defaultPhoto from "../assets/defaultPp.png"
 
-const CvExample = {
+const CvEmpty = {
     personalInfo: {
         fName: "",
         lName: "",
@@ -12,4 +12,4 @@ const CvExample = {
     },
 }
 
-export default CvExample
+export default CvEmpty

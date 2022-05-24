@@ -1,21 +1,21 @@
 import React from "react"
-import exampleImg from "../assets/boris.png"
 
-export default function SideInfo() {
+export default function SideInfo({ cv }) {
+    const { phoneNum, email, photo } = cv.personalInfo
     return (
         <div className="side-info-section">
             <div>
-                <img src={exampleImg} className="profile-img"></img>
+                <img src={photo} className="profile-img"></img>
             </div>
             <section>
                 <h3>Personal Details</h3>
                 <div className="info-details">
-                    <span className="info-bold">Email</span>
-                    <span></span>
+                    <span className="info-bold">Email:</span>
+                    <span>{email}</span>
                 </div>
                 <div className="info-details">
-                    <span className="info-bold">Phone Number</span>
-                    <span></span>
+                    <span className="info-bold">Phone Number:</span>
+                    <span>{phoneNum}</span>
                 </div>
             </section>
             <section>
