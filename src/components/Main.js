@@ -21,6 +21,20 @@ const Main = () => {
         }))
     }
 
+    const handleChangeEducation = (e, id) => {
+        const { name, value } = e.target
+
+        setCv((prevState) => {
+            const newEducation = prevState.education.map((educationObj) => {
+                if (educationObj.id === id) {
+                    return { ...educationObj, [name]: value }
+                }
+                return educationObj
+            })
+            return { ...prevState, education: [...newEducation] }
+        })
+    }
+
     const handleAddEducation = () => {
         setCv((prevState) => ({
             ...prevState,
@@ -38,16 +52,11 @@ const Main = () => {
         }))
     }
 
-    const handleChangeEducation = (e, id) => {
-        const { name, value } = e.target
-
+    const handleDeleteEducation = (id) => {
         setCv((prevState) => {
-            const newEducation = prevState.education.map((educationObj) => {
-                if (educationObj.id === id) {
-                    return { ...educationObj, [name]: value }
-                }
-                return educationObj
-            })
+            const newEducation = prevState.education.filter(
+                (educationObj) => educationObj.id !== id
+            )
             return { ...prevState, education: [...newEducation] }
         })
     }
@@ -59,6 +68,7 @@ const Main = () => {
                 onChangePersonal={handleChangePersonal}
                 addEducation={handleAddEducation}
                 onChangeEducation={handleChangeEducation}
+                deleteEducation={handleDeleteEducation}
             />
             <CvPreview cv={cv} />
         </StyledMain>

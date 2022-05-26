@@ -5,14 +5,21 @@ import Education from "./Education"
 import Experience from "./Experience"
 import SkillsForm from "./SkillsForm"
 
-const CvForm = ({ cv, onChangePersonal, addEducation, onChangeEducation }) => {
+const CvForm = ({
+    cv,
+    onChangePersonal,
+    onChangeEducation,
+    addEducation,
+    deleteEducation,
+}) => {
     return (
         <StyledCvCreator>
             <PersonalForm onChangePersonal={onChangePersonal} />
             <Education
                 education={cv.education}
-                onChange={onChangeEducation}
+                onChangeEducation={onChangeEducation}
                 addEducation={addEducation}
+                deleteEducation={deleteEducation}
             />
             <Experience />
             <SkillsForm />
