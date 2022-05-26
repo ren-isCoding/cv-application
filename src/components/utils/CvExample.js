@@ -1,4 +1,5 @@
-import defaultPhoto from "../assets/defaultPp.png"
+import examplePhoto from "../assets/boris.png"
+import { v4 as uuidv4 } from "uuid"
 
 const CvExample = {
     personalInfo: {
@@ -8,7 +9,7 @@ const CvExample = {
         email: "",
         phoneNum: "",
         desc: "",
-        photo: defaultPhoto,
+        photo: examplePhoto,
     },
 }
 

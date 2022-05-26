@@ -1,10 +1,10 @@
 import React from "react"
 
-export default function PersonalForm({ onChange }) {
+export default function PersonalForm({ onChangePersonal }) {
     return (
         <section>
             <h3>Personal Information</h3>
-            <div className="inputs" onChange={(e) => onChange(e)}>
+            <div className="inputs" onChange={(e) => onChangePersonal(e)}>
                 <input type="text" placeholder="First name" name="fName" />
                 <input placeholder="Last Name" name="lName" />
                 <input placeholder="Profession" name="profession" />

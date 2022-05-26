@@ -4,6 +4,7 @@ import CvPreview from "./CvPreview/CvPreview"
 import { StyledMain } from "./styles/Main.styled"
 import CvEmpty from "./utils/CvEmpty"
 import CvExample from "./utils/CvExample"
+import { v4 as uuidv4 } from "uuid"
 
 const Main = () => {
     const [cv, setCv] = useState(CvEmpty)
@@ -20,9 +21,45 @@ const Main = () => {
         }))
     }
 
+    const handleAddEducation = () => {
+        setCv((prevState) => ({
+            ...prevState,
+            education: [
+                ...prevState.education,
+                {
+                    id: uuidv4(),
+                    school: "",
+                    schoolCity: "",
+                    degree: "",
+                    schoolStart: "",
+                    schoolEnd: "",
+                },
+            ],
+        }))
+    }
+
+    const handleChangeEducation = (e, id) => {
+        const { name, value } = e.target
+
+        setCv((prevState) => {
+            const newEducation = prevState.education.map((educationObj) => {
+                if (educationObj.id === id) {
+                    return { ...educationObj, [name]: value }
+                }
+                return educationObj
+            })
+            return { ...prevState, education: [...newEducation] }
+        })
+    }
+
     return (
         <StyledMain>
-            <CvForm cv={cv} onChangePersonal={handleChangePersonal} />
+            <CvForm
+                cv={cv}
+                onChangePersonal={handleChangePersonal}
+                addEducation={handleAddEducation}
+                onChangeEducation={handleChangeEducation}
+            />
             <CvPreview cv={cv} />
         </StyledMain>
     )
