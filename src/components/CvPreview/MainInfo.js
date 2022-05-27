@@ -1,5 +1,5 @@
 import React from "react"
-import Education from "./Education"
+import EducationPreview from "./EducationPreview"
 import Experience from "./Experience"
 
 export default function MainInfo({ cv }) {
@@ -12,7 +12,7 @@ export default function MainInfo({ cv }) {
                     {desc ? desc : "Short description about yourself."}
                 </div>
             </section>
-            <Education />
+            <EducationPreview education={cv.education} />
             <Experience />
         </div>
     )
