@@ -22,7 +22,6 @@ export default function EducationPreview({ education }) {
         <section>
             <h3>Education</h3>
             {education.length ? educationArray : "Empty"}
-            {console.log(!!education.length)}
         </section>
     )
 }
