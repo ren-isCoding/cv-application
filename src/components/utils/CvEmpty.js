@@ -11,6 +11,7 @@ const CvEmpty = {
         desc: "",
         photo: defaultPhoto,
     },
+
     education: [
         {
             id: uuidv4(),
@@ -19,6 +20,17 @@ const CvEmpty = {
             degree: "",
             schoolStart: "",
             schoolEnd: "",
+        },
+    ],
+
+    experience: [
+        {
+            id: uuidv4(),
+            job: "",
+            company: "",
+            jobCity: "",
+            jobStart: "",
+            jobEnd: "",
         },
     ],
 }

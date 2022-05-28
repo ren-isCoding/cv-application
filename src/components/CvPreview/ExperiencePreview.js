@@ -1,6 +1,6 @@
 import React from "react"
 
-export default function Experience() {
+export default function ExperiencePreview() {
     return (
         <section>
             <h3>Experience</h3>

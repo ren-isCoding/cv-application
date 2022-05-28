@@ -61,6 +61,20 @@ const Main = () => {
         })
     }
 
+    const handleChangeExperience = (e, id) => {
+        const { name, value } = e.target
+
+        setCv((prevState) => {
+            const newExperience = prevState.experience.map((experienceObj) => {
+                if (experienceObj.id === id) {
+                    return { ...experienceObj, [name]: value }
+                }
+                return experienceObj
+            })
+            return { ...prevState, experience: [...newExperience] }
+        })
+    }
+
     return (
         <StyledMain>
             <CvForm
@@ -69,6 +83,7 @@ const Main = () => {
                 addEducation={handleAddEducation}
                 onChangeEducation={handleChangeEducation}
                 deleteEducation={handleDeleteEducation}
+                changeExperience={handleChangeExperience}
             />
             <CvPreview cv={cv} />
         </StyledMain>

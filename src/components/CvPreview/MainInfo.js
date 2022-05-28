@@ -1,6 +1,6 @@
 import React from "react"
 import EducationPreview from "./EducationPreview"
-import Experience from "./Experience"
+import ExperiencePreview from "./ExperiencePreview"
 
 export default function MainInfo({ cv }) {
     const { desc } = cv.personalInfo
@@ -13,7 +13,7 @@ export default function MainInfo({ cv }) {
                 </div>
             </section>
             <EducationPreview education={cv.education} />
-            <Experience />
+            <ExperiencePreview experience={cv.experience} />
         </div>
     )
 }

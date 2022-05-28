@@ -11,6 +11,7 @@ const CvForm = ({
     onChangeEducation,
     addEducation,
     deleteEducation,
+    changeExperience,
 }) => {
     return (
         <StyledCvCreator>
@@ -21,7 +22,7 @@ const CvForm = ({
                 addEducation={addEducation}
                 deleteEducation={deleteEducation}
             />
-            <Experience />
+            <Experience experience={cv.experience} changeExperience={changeExperience} />
             <SkillsForm />
         </StyledCvCreator>
     )

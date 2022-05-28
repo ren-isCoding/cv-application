@@ -1,8 +1,8 @@
 import React from "react"
 
-export default function ExperienceForm() {
+export default function ExperienceForm({ id, changeExperience }) {
     return (
-        <div className="inputs">
+        <div className="inputs" onChange={(e) => changeExperience(e, id)}>
             <input placeholder="Job profession" name="job" />
             <input placeholder="Company name" name="company" />
             <input placeholder="City" name="jobCity" />
