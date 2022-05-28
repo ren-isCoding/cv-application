@@ -6,11 +6,12 @@ export default function EducationPreview({ education }) {
         return (
             <div className="info-wrapper" key={id}>
                 <span className="info-date">
-                    {schoolStart} - {schoolEnd}
+                    {schoolStart ? schoolStart + " -" : ""} {schoolEnd}
                 </span>
                 <div className="info-details">
                     <span className="info-bold">
-                        {school}, {schoolCity}
+                        {school ? school + ", " : ""}
+                        {schoolCity}
                     </span>
                     <span>{degree}</span>
                 </div>
@@ -20,7 +21,8 @@ export default function EducationPreview({ education }) {
     return (
         <section>
             <h3>Education</h3>
-            {educationArray}
+            {education.length ? educationArray : "Empty"}
+            {console.log(!!education.length)}
         </section>
     )
 }

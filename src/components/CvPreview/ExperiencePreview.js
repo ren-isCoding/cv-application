@@ -6,12 +6,12 @@ export default function ExperiencePreview({ experience }) {
         return (
             <div className="info-wrapper" key={id}>
                 <span className="info-date">
-                    {jobStart} - {jobEnd}
+                    {jobStart ? jobStart + " -" : ""} {jobEnd}
                 </span>
                 <div className="info-details">
                     <span className="info-bold">{job}</span>
                     <span>
-                        {company}, {jobCity}
+                        {company ? company + "," : ""} {jobCity}
                     </span>
                 </div>
             </div>
@@ -20,7 +20,7 @@ export default function ExperiencePreview({ experience }) {
     return (
         <section>
             <h3>Experience</h3>
-            {experienceState}
+            {experience.length ? experienceState : "Empty"}
         </section>
     )
 }
