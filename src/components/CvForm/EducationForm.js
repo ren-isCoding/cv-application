@@ -25,7 +25,7 @@ export default function EducationForm({
         <section>
             <h3 id="education">Education</h3>
             {educationState}
-            <button className="add-btn" onClick={addEducation}>
+            <button className="add-btn" onClick={(e) => addEducation()}>
                 Add new section
             </button>
         </section>
