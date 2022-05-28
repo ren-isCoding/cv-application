@@ -1,5 +1,4 @@
 import React from "react"
-import EducationForm from "./EducationForm"
 import ExperienceForm from "./ExperienceForm"
 
 export default function Experience({ experience, changeExperience }) {

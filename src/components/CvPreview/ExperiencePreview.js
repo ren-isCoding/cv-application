@@ -1,16 +1,26 @@
 import React from "react"
 
-export default function ExperiencePreview() {
+export default function ExperiencePreview({ experience }) {
+    const experienceState = experience.map((experienceObj) => {
+        const { id, job, company, jobCity, jobStart, jobEnd } = experienceObj
+        return (
+            <div className="info-wrapper" key={id}>
+                <span className="info-date">
+                    {jobStart} - {jobEnd}
+                </span>
+                <div className="info-details">
+                    <span className="info-bold">{job}</span>
+                    <span>
+                        {company}, {jobCity}
+                    </span>
+                </div>
+            </div>
+        )
+    })
     return (
         <section>
             <h3>Experience</h3>
-            <div className="info-wrapper">
-                <span className="info-date">2015 - Present</span>
-                <div className="info-details">
-                    <span className="info-bold">Junior Web Developer</span>
-                    <span>Facebook, City</span>
-                </div>
-            </div>
+            {experienceState}
         </section>
     )
 }
