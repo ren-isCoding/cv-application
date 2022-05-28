@@ -1,4 +1,4 @@
-import React, { Component } from "react"
+import React from "react"
 import { StyledCvPreview } from "../styles/CvPreview.styled"
 import Header from "./Header"
 import MainInfo from "./MainInfo"

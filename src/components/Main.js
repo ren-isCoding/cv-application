@@ -79,9 +79,9 @@ const Main = () => {
         <StyledMain>
             <CvForm
                 cv={cv}
-                onChangePersonal={handleChangePersonal}
+                changePersonal={handleChangePersonal}
                 addEducation={handleAddEducation}
-                onChangeEducation={handleChangeEducation}
+                changeEducation={handleChangeEducation}
                 deleteEducation={handleDeleteEducation}
                 changeExperience={handleChangeExperience}
             />

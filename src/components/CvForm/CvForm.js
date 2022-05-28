@@ -1,28 +1,31 @@
-import React, { useState } from "react"
+import React from "react"
 import { StyledCvCreator } from "../styles/CvForm.styled"
 import PersonalForm from "./PersonalForm"
-import Education from "./Education"
-import Experience from "./Experience"
+import EducationForm from "./EducationForm"
+import ExperienceForm from "./ExperienceForm"
 import SkillsForm from "./SkillsForm"
 
 const CvForm = ({
     cv,
-    onChangePersonal,
-    onChangeEducation,
+    changePersonal,
+    changeEducation,
     addEducation,
     deleteEducation,
     changeExperience,
 }) => {
     return (
         <StyledCvCreator>
-            <PersonalForm onChangePersonal={onChangePersonal} />
-            <Education
+            <PersonalForm changePersonal={changePersonal} />
+            <EducationForm
                 education={cv.education}
-                onChangeEducation={onChangeEducation}
+                changeEducation={changeEducation}
                 addEducation={addEducation}
                 deleteEducation={deleteEducation}
             />
-            <Experience experience={cv.experience} changeExperience={changeExperience} />
+            <ExperienceForm
+                experience={cv.experience}
+                changeExperience={changeExperience}
+            />
             <SkillsForm />
         </StyledCvCreator>
     )
