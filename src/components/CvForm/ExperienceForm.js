@@ -1,6 +1,11 @@
 import React from "react"
 
-export default function ExperienceForm({ experience, changeExperience }) {
+export default function ExperienceForm({
+    experience,
+    changeExperience,
+    addExperience,
+    deleteExperience,
+}) {
     const experienceState = experience.map((experienceObj) => {
         const { id } = experienceObj
         return (
@@ -10,7 +15,9 @@ export default function ExperienceForm({ experience, changeExperience }) {
                 <input placeholder="City" name="jobCity" />
                 <input placeholder="Start date (year)" name="jobStart" />
                 <input placeholder="End date (year)" name="jobEnd" />
-                <button className="remove-btn">Remove</button>
+                <button className="remove-btn" onClick={(e) => deleteExperience(id)}>
+                    Remove
+                </button>
             </div>
         )
     })
@@ -18,7 +25,9 @@ export default function ExperienceForm({ experience, changeExperience }) {
         <section>
             <h3 id="experience">Experience</h3>
             {experienceState}
-            <button className="add-btn">Add new section</button>
+            <button className="add-btn" onClick={(e) => addExperience()}>
+                Add new section
+            </button>
         </section>
     )
 }

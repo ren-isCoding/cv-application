@@ -75,6 +75,32 @@ const Main = () => {
         })
     }
 
+    const handleAddExperience = () => {
+        setCv((prevState) => ({
+            ...prevState,
+            experience: [
+                ...prevState.experience,
+                {
+                    id: uuidv4(),
+                    job: "",
+                    company: "",
+                    jobCity: "",
+                    jobStart: "",
+                    jobEnd: "",
+                },
+            ],
+        }))
+    }
+
+    const handleDeleteExperience = (id) => {
+        setCv((prevState) => {
+            const newExperience = prevState.experience.filter(
+                (experienceObj) => experienceObj.id !== id
+            )
+            return { ...prevState, experience: [...newExperience] }
+        })
+    }
+
     return (
         <StyledMain>
             <CvForm
@@ -84,6 +110,8 @@ const Main = () => {
                 changeEducation={handleChangeEducation}
                 deleteEducation={handleDeleteEducation}
                 changeExperience={handleChangeExperience}
+                addExperience={handleAddExperience}
+                deleteExperience={handleDeleteExperience}
             />
             <CvPreview cv={cv} />
         </StyledMain>
