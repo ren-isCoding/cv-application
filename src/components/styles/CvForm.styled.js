@@ -12,7 +12,8 @@ export let StyledCvCreator = styled.div`
     background: #eeeeee;
     padding: 3rem;
     border-radius: 5px;
-    box-shadow: 0px 8px 17px 2px rgba(0, 0, 0, 0.14), 0px 3px 14px 2px rgba(0, 0, 0, 0.12), 0px 5px 5px -3px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 8px 17px 2px rgba(0, 0, 0, 0.14), 0px 3px 14px 2px rgba(0, 0, 0, 0.12),
+        0px 5px 5px -3px rgba(0, 0, 0, 0.2);
 
     h3 {
         margin-bottom: 1rem;
@@ -35,6 +36,20 @@ export let StyledCvCreator = styled.div`
         padding: 0 1rem;
     }
 
+    input[type="file"] {
+        display: none;
+    }
+
+    label {
+        text-align: center;
+        cursor: pointer;
+    }
+
+    label:hover {
+        color: rgb(101, 210, 223);
+    }
+
+    label,
     button {
         width: 100%;
         height: 3rem;

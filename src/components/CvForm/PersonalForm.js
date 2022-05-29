@@ -1,6 +1,6 @@
 import React from "react"
 
-export default function PersonalForm({ changePersonal }) {
+export default function PersonalForm({ changePersonal, changePhoto }) {
     const preventLetters = (e) => {
         if (e.which < 48 || e.which > 57 || e.target.value.length > 15) {
             e.preventDefault()
@@ -21,7 +21,14 @@ export default function PersonalForm({ changePersonal }) {
                     onKeyPress={(e) => preventLetters(e)}
                 />
                 <input placeholder="Description" name="desc" />
-                <button className="add-btn">Upload Photo</button>
+
+                <input
+                    type="file"
+                    id="file-upload"
+                    name="photo"
+                    onClick={(e) => changePhoto(e)}
+                />
+                <label htmlFor="file-upload">Upload your photo</label>
             </div>
         </section>
     )

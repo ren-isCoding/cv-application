@@ -12,6 +12,11 @@ const Main = () => {
     const handleChangePersonal = (e) => {
         const { name, value, type } = e.target
 
+        if (type === "file") {
+            handleChangePhoto(e)
+            return
+        }
+
         setCv((prevState) => ({
             ...prevState,
             personalInfo: {
@@ -19,6 +24,24 @@ const Main = () => {
                 [name]: value,
             },
         }))
+    }
+
+    const handleChangePhoto = (e) => {
+        const { name } = e.target
+
+        const file = e.target.files[0]
+        if (!file) return
+        const reader = new FileReader()
+        reader.onload = () => {
+            setCv((prevState) => ({
+                ...prevState,
+                personalInfo: {
+                    ...prevState.personalInfo,
+                    [name]: reader.result,
+                },
+            }))
+        }
+        reader.readAsDataURL(file)
     }
 
     const handleChangeEducation = (e, id) => {
@@ -106,6 +129,7 @@ const Main = () => {
             <CvForm
                 cv={cv}
                 changePersonal={handleChangePersonal}
+                changePhoto={handleChangePhoto}
                 addEducation={handleAddEducation}
                 changeEducation={handleChangeEducation}
                 deleteEducation={handleDeleteEducation}

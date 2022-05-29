@@ -8,6 +8,7 @@ import SkillsForm from "./SkillsForm"
 const CvForm = ({
     cv,
     changePersonal,
+    changePhoto,
     changeEducation,
     addEducation,
     deleteEducation,
@@ -17,7 +18,7 @@ const CvForm = ({
 }) => {
     return (
         <StyledCvCreator>
-            <PersonalForm changePersonal={changePersonal} />
+            <PersonalForm changePersonal={changePersonal} changePhoto={changePhoto} />
             <EducationForm
                 education={cv.education}
                 changeEducation={changeEducation}
