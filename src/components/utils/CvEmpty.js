@@ -15,6 +15,8 @@ const CvEmpty = {
     education: [],
 
     experience: [],
+
+    skills: [],
 }
 
 export default CvEmpty

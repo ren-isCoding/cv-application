@@ -15,6 +15,7 @@ const CvForm = ({
     changeExperience,
     addExperience,
     deleteExperience,
+    addSkill,
 }) => {
     return (
         <StyledCvCreator>
@@ -31,7 +32,7 @@ const CvForm = ({
                 addExperience={addExperience}
                 deleteExperience={deleteExperience}
             />
-            <SkillsForm />
+            <SkillsForm addSkill={addSkill} />
         </StyledCvCreator>
     )
 }

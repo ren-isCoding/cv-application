@@ -1,13 +1,15 @@
 import React from "react"
 
-export default function SkillsForm() {
+export default function SkillsForm({ addSkill }) {
     return (
-        <section>
+        <form onSubmit={(e) => addSkill(e)}>
             <h3>Skills</h3>
             <div className="inputs">
                 <input type="text" placeholder="What is your specialty?" name="skill" />
-                <button className="add-btn">Add to skills</button>
+                <button type="submit" className="add-btn">
+                    Add to skills
+                </button>
             </div>
-        </section>
+        </form>
     )
 }

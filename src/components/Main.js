@@ -124,6 +124,15 @@ const Main = () => {
         })
     }
 
+    const handleAddSkill = (e) => {
+        e.preventDefault()
+        console.log(e.target[0].value)
+        setCv((prevState) => ({
+            ...prevState,
+            skills: [...prevState.skills, { id: uuidv4(), name: e.target[0].value }],
+        }))
+    }
+
     return (
         <StyledMain>
             <CvForm
@@ -136,6 +145,7 @@ const Main = () => {
                 changeExperience={handleChangeExperience}
                 addExperience={handleAddExperience}
                 deleteExperience={handleDeleteExperience}
+                addSkill={handleAddSkill}
             />
             <CvPreview cv={cv} />
         </StyledMain>

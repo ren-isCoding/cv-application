@@ -2,6 +2,9 @@ import React from "react"
 
 export default function SideInfo({ cv }) {
     const { phoneNum, email, photo } = cv.personalInfo
+    const skills = cv.skills.map((skill) => {
+        return <li key={skill.id}>{skill.name}</li>
+    })
     return (
         <div className="side-info-section">
             <div>
@@ -20,12 +23,7 @@ export default function SideInfo({ cv }) {
             </section>
             <section>
                 <h3>Skills</h3>
-                <ul className="skills-list">
-                    <li>Programming</li>
-                    <li>Photoshop</li>
-                    <li>Teamwork</li>
-                    <li>Design</li>
-                </ul>
+                <ul className="skills-list">{skills}</ul>
             </section>
         </div>
     )
