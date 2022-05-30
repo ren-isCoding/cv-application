@@ -67,4 +67,22 @@ export let StyledCvCreator = styled.div`
     .add-btn:hover {
         color: rgb(0, 190, 0);
     }
+
+    .skill-li {
+        margin-left: 1.5rem;
+        margin-bottom: 1.5rem;
+        position: relative;
+    }
+
+    .skill-li button {
+        position: absolute;
+        right: 0;
+        width: 3rem;
+        background: none;
+        color: #333333;
+    }
+
+    .skill-li button:hover {
+        color: red;
+    }
 `

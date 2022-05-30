@@ -124,13 +124,19 @@ const Main = () => {
         })
     }
 
-    const handleAddSkill = (e) => {
+    const handleAddSkill = (e, value) => {
         e.preventDefault()
-        console.log(e.target[0].value)
         setCv((prevState) => ({
             ...prevState,
-            skills: [...prevState.skills, { id: uuidv4(), name: e.target[0].value }],
+            skills: [...prevState.skills, { id: uuidv4(), name: value }],
         }))
+    }
+
+    const handleDeleteSkill = (id) => {
+        setCv((prevState) => {
+            const newSkills = prevState.skills.filter((skillObj) => skillObj.id !== id)
+            return { ...prevState, skills: [...newSkills] }
+        })
     }
 
     return (
@@ -146,6 +152,7 @@ const Main = () => {
                 addExperience={handleAddExperience}
                 deleteExperience={handleDeleteExperience}
                 addSkill={handleAddSkill}
+                deleteSkill={handleDeleteSkill}
             />
             <CvPreview cv={cv} />
         </StyledMain>
