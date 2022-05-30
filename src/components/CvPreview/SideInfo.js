@@ -23,7 +23,9 @@ export default function SideInfo({ cv }) {
             </section>
             <section>
                 <h3>Skills</h3>
-                <ul className="skills-list">{skills}</ul>
+                <ul className="skills-list">
+                    {skills.length ? skills : "No information."}
+                </ul>
             </section>
         </div>
     )

@@ -20,7 +20,7 @@ export default function ExperiencePreview({ experience }) {
     return (
         <section>
             <h3>Experience</h3>
-            {experience.length ? experienceState : "Empty"}
+            {experience.length ? experienceState : "No information."}
         </section>
     )
 }

@@ -21,7 +21,7 @@ export default function EducationPreview({ education }) {
     return (
         <section>
             <h3>Education</h3>
-            {education.length ? educationArray : "Empty"}
+            {education.length ? educationArray : "No information."}
         </section>
     )
 }
