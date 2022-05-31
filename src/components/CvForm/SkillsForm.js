@@ -17,14 +17,14 @@ export default function SkillsForm({ skills, addSkill, deleteSkill }) {
         <form onSubmit={(e) => addSkill(e, value)}>
             <h3>Skills</h3>
             {skillsState}
-            <div className="inputs">
+            <div className="skills-form">
                 <input
                     type="text"
                     placeholder="What is your specialty?"
                     name="skill"
                     onChange={(e) => updateValue(e)}
                 />
-                <button type="submit" className="add-btn">
+                <button type="submit" className="add-skill-btn">
                     Add to skills
                 </button>
             </div>

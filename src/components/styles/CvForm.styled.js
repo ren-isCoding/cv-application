@@ -31,7 +31,7 @@ export let StyledCvCreator = styled.div`
     }
 
     input {
-        height: 3.5rem;
+        height: 3rem;
         border-radius: 5px;
         padding: 0 1rem;
     }
@@ -43,10 +43,10 @@ export let StyledCvCreator = styled.div`
     label {
         text-align: center;
         cursor: pointer;
-    }
 
-    label:hover {
-        color: rgb(101, 210, 223);
+        &:hover {
+            color: rgb(101, 210, 223);
+        }
     }
 
     label,
@@ -68,6 +68,24 @@ export let StyledCvCreator = styled.div`
         color: rgb(0, 190, 0);
     }
 
+    .skills-form {
+        display: flex;
+        gap: 1rem;
+        align-content: center;
+    }
+
+    .skills-form input {
+        width: 100%;
+    }
+
+    .add-skill-btn {
+        width: 15rem;
+
+        &:hover {
+            color: rgb(0, 190, 0);
+        }
+    }
+
     .skill-li {
         margin-left: 1.5rem;
         margin-bottom: 1.5rem;
@@ -80,9 +98,26 @@ export let StyledCvCreator = styled.div`
         width: 3rem;
         background: none;
         color: #333333;
+
+        &:hover {
+            color: red;
+        }
     }
 
-    .skill-li button:hover {
+    .other-options {
+        display: flex;
+        gap: 1rem;
+    }
+
+    .create-pdf-btn:hover {
+        color: rgb(0, 190, 0);
+    }
+
+    .load-example-btn:hover {
+        color: rgb(101, 210, 223);
+    }
+
+    .reset-btn:hover {
         color: red;
     }
 `
