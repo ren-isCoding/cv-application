@@ -4,6 +4,7 @@ import PersonalForm from "./PersonalForm"
 import EducationForm from "./EducationForm"
 import ExperienceForm from "./ExperienceForm"
 import SkillsForm from "./SkillsForm"
+import OtherOptions from "./OtherOptions"
 
 const CvForm = ({
     cv,
@@ -38,6 +39,7 @@ const CvForm = ({
                 addSkill={addSkill}
                 deleteSkill={deleteSkill}
             />
+            <OtherOptions />
         </StyledCvCreator>
     )
 }
