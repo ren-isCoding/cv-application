@@ -139,6 +139,10 @@ const Main = () => {
         })
     }
 
+    const handleLoadExample = () => {
+        setCv(CvExample)
+    }
+
     return (
         <StyledMain>
             <CvForm
@@ -153,6 +157,7 @@ const Main = () => {
                 deleteExperience={handleDeleteExperience}
                 addSkill={handleAddSkill}
                 deleteSkill={handleDeleteSkill}
+                loadExample={handleLoadExample}
             />
             <CvPreview cv={cv} />
         </StyledMain>
