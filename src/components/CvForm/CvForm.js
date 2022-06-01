@@ -22,7 +22,11 @@ const CvForm = ({
 }) => {
     return (
         <StyledCvCreator>
-            <PersonalForm changePersonal={changePersonal} changePhoto={changePhoto} />
+            <PersonalForm
+                personal={cv.personalInfo}
+                changePersonal={changePersonal}
+                changePhoto={changePhoto}
+            />
             <EducationForm
                 education={cv.education}
                 changeEducation={changeEducation}

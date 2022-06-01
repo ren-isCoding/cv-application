@@ -7,7 +7,7 @@ export default function EducationForm({
     deleteEducation,
 }) {
     const educationState = education.map((educationObj) => {
-        const { id } = educationObj
+        const { id, schoolStart, schoolEnd, school, schoolCity, degree } = educationObj
         const currentYear = new Date().getFullYear()
         const preventLetters = (e) => {
             if (e.which < 48 || e.which > 57 || e.target.value.length > 3) {
@@ -22,6 +22,7 @@ export default function EducationForm({
                     max={currentYear}
                     placeholder="From (year)"
                     name="schoolStart"
+                    defaultValue={schoolStart}
                     onKeyPress={(e) => preventLetters(e)}
                 />
                 <input
@@ -30,11 +31,12 @@ export default function EducationForm({
                     max={currentYear}
                     placeholder="To (year)"
                     name="schoolEnd"
+                    defaultValue={schoolEnd}
                     onKeyPress={(e) => preventLetters(e)}
                 />
-                <input placeholder="School" name="school" />
-                <input placeholder="City" name="schoolCity" />
-                <input placeholder="Degree" name="degree" />
+                <input placeholder="School" name="school" defaultValue={school} />
+                <input placeholder="City" name="schoolCity" defaultValue={schoolCity} />
+                <input placeholder="Degree" name="degree" defaultValue={degree} />
                 <button className="remove-btn" onClick={(e) => deleteEducation(id)}>
                     Remove
                 </button>

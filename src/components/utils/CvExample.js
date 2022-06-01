@@ -13,27 +13,48 @@ const CvExample = {
 
     education: [
         {
-            id: "01b9db56-0fac-49a1-aef6-fcd4de5180db",
+            id: "education1",
             school: "Technical Institute",
             schoolCity: "Naples",
             degree: "High school diploma",
             schoolStart: "2015",
             schoolEnd: "2020",
         },
+        {
+            id: "education2",
+            school: "School/Uni Name",
+            schoolCity: "City",
+            degree: "Degree",
+            schoolStart: "From",
+            schoolEnd: "To",
+        },
     ],
 
     experience: [
         {
-            id: "97e5bdec-41f2-4e8b-9612-25b710c9adc0",
+            id: "experience1",
             job: "Junior Web Developer",
             company: "Facebook",
             jobCity: "Naples",
             jobStart: "2020",
             jobEnd: "2025",
         },
+        {
+            id: "experience2",
+            job: "Job Position",
+            company: "Company",
+            jobCity: "City",
+            jobStart: "From",
+            jobEnd: "To",
+        },
     ],
 
-    skills: [],
+    skills: [
+        { id: "skill1", name: "HTML" },
+        { id: "skill2", name: "CSS" },
+        { id: "skill3", name: "JavaScript" },
+        { id: "skill4", name: "React" },
+    ],
 }
 
 export default CvExample

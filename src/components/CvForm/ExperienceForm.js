@@ -7,7 +7,7 @@ export default function ExperienceForm({
     deleteExperience,
 }) {
     const experienceState = experience.map((experienceObj) => {
-        const { id } = experienceObj
+        const { id, jobStart, jobEnd, job, company, jobCity } = experienceObj
         const currentYear = new Date().getFullYear()
         const preventLetters = (e) => {
             if (e.which < 48 || e.which > 57 || e.target.value.length > 3) {
@@ -24,6 +24,7 @@ export default function ExperienceForm({
                     max={currentYear}
                     placeholder="From (year)"
                     name="jobStart"
+                    defaultValue={jobStart}
                     onKeyPress={(e) => preventLetters(e)}
                 />
                 <input
@@ -32,11 +33,12 @@ export default function ExperienceForm({
                     max={currentYear}
                     placeholder="To (year)"
                     name="jobEnd"
+                    defaultValue={jobEnd}
                     onKeyPress={(e) => preventLetters(e)}
                 />
-                <input placeholder="Job profession" name="job" />
-                <input placeholder="Company name" name="company" />
-                <input placeholder="City" name="jobCity" />
+                <input placeholder="Job profession" name="job" defaultValue={job} />
+                <input placeholder="Company name" name="company" defaultValue={company} />
+                <input placeholder="City" name="jobCity" defaultValue={jobCity} />
                 <button className="remove-btn" onClick={(e) => deleteExperience(id)}>
                     Remove
                 </button>
