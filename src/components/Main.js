@@ -152,7 +152,11 @@ const Main = () => {
     }
 
     const componentRef = useRef()
-    const handlePrintCv = useReactToPrint({ content: () => componentRef.current })
+    const handlePrintCv = useReactToPrint({
+        content: () => componentRef.current,
+        pageStyle:
+            "@media print {html, body {height: 99%;} } @page { size: auto;  margin: 0mm; }",
+    })
 
     return (
         <StyledMain>
