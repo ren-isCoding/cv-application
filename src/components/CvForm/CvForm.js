@@ -19,6 +19,7 @@ const CvForm = ({
     addSkill,
     deleteSkill,
     loadExample,
+    resetCv,
 }) => {
     return (
         <StyledCvCreator>
@@ -44,7 +45,7 @@ const CvForm = ({
                 addSkill={addSkill}
                 deleteSkill={deleteSkill}
             />
-            <OtherOptions loadExample={loadExample} />
+            <OtherOptions loadExample={loadExample} resetCv={resetCv} />
         </StyledCvCreator>
     )
 }

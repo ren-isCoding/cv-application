@@ -143,6 +143,13 @@ const Main = () => {
         setCv(CvExample)
     }
 
+    const handleResetCv = () => {
+        setCv(CvEmpty)
+        Array.from(document.querySelectorAll("input")).forEach(
+            (input) => (input.value = "")
+        )
+    }
+
     return (
         <StyledMain>
             <CvForm
@@ -158,6 +165,7 @@ const Main = () => {
                 addSkill={handleAddSkill}
                 deleteSkill={handleDeleteSkill}
                 loadExample={handleLoadExample}
+                resetCv={handleResetCv}
             />
             <CvPreview cv={cv} />
         </StyledMain>
