@@ -5,6 +5,7 @@ import { StyledMain } from "./styles/Main.styled"
 import CvEmpty from "./utils/CvEmpty"
 import CvExample from "./utils/CvExample"
 import { v4 as uuidv4 } from "uuid"
+import { useReactToPrint } from "react-to-print"
 
 const Main = () => {
     const [cv, setCv] = useState(CvEmpty)
@@ -150,6 +151,9 @@ const Main = () => {
         )
     }
 
+    const componentRef = useRef()
+    const handlePrintCv = useReactToPrint({ content: () => componentRef.current })
+
     return (
         <StyledMain>
             <CvForm
@@ -164,10 +168,11 @@ const Main = () => {
                 deleteExperience={handleDeleteExperience}
                 addSkill={handleAddSkill}
                 deleteSkill={handleDeleteSkill}
+                printCv={handlePrintCv}
                 loadExample={handleLoadExample}
                 resetCv={handleResetCv}
             />
-            <CvPreview cv={cv} />
+            <CvPreview cv={cv} ref={componentRef} />
         </StyledMain>
     )
 }
