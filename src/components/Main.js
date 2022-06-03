@@ -10,6 +10,18 @@ import { useReactToPrint } from "react-to-print"
 const Main = () => {
     const [cv, setCv] = useState(CvEmpty)
 
+    //persist state on reload
+    React.useEffect(() => {
+        const data = localStorage.getItem("my-cv")
+        if (data) {
+            setCv(JSON.parse(data))
+        }
+    }, [])
+
+    React.useEffect(() => {
+        localStorage.setItem("my-cv", JSON.stringify(cv))
+    })
+
     const handleChangePersonal = (e) => {
         const { name, value, type } = e.target
 
