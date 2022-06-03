@@ -12,7 +12,6 @@ export default function ExperienceForm({
         const preventLetters = (e) => {
             if (e.which < 48 || e.which > 57 || e.target.value.length > 3) {
                 e.preventDefault()
-                console.log(e)
             }
         }
 
