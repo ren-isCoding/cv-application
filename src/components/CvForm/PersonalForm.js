@@ -15,11 +15,15 @@ export default function PersonalForm({ personal, changePersonal, changePhoto }) 
                     maxLength={15}
                     defaultValue={fName}
                 />
-                <input placeholder="Last Name" name="lName" defaultValue={lName} />
+                <input
+                    placeholder="Last Name"
+                    name="lName"
+                    maxLength={15}
+                    defaultValue={lName}
+                />
                 <input
                     placeholder="Profession"
                     name="profession"
-                    maxLength={15}
                     defaultValue={profession}
                 />
                 <input placeholder="Email" name="email" defaultValue={email} />
