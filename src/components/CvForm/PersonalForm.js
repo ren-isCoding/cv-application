@@ -1,13 +1,9 @@
 import React from "react"
+import { preventLetters } from "../helpers"
 
 export default function PersonalForm({ personal, changePersonal, changePhoto }) {
-    const preventLetters = (e) => {
-        if (e.which < 48 || e.which > 57 || e.target.value.length > 15) {
-            e.preventDefault()
-        }
-    }
-
     const { fName, lName, profession, email, phoneNum, desc } = personal
+
     return (
         <section>
             <h3>Personal Information</h3>
@@ -16,12 +12,14 @@ export default function PersonalForm({ personal, changePersonal, changePhoto }) 
                     type="text"
                     placeholder="First name"
                     name="fName"
+                    maxLength={15}
                     defaultValue={fName}
                 />
                 <input placeholder="Last Name" name="lName" defaultValue={lName} />
                 <input
                     placeholder="Profession"
                     name="profession"
+                    maxLength={15}
                     defaultValue={profession}
                 />
                 <input placeholder="Email" name="email" defaultValue={email} />
@@ -29,6 +27,7 @@ export default function PersonalForm({ personal, changePersonal, changePhoto }) 
                     type="text"
                     placeholder="Phone Number"
                     name="phoneNum"
+                    maxLength={15}
                     defaultValue={phoneNum}
                     onKeyPress={(e) => preventLetters(e)}
                 />

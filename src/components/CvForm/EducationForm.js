@@ -1,4 +1,5 @@
 import React from "react"
+import { preventLetters } from "../helpers"
 
 export default function EducationForm({
     education,
@@ -9,11 +10,7 @@ export default function EducationForm({
     const educationState = education.map((educationObj) => {
         const { id, schoolStart, schoolEnd, school, schoolCity, degree } = educationObj
         const currentYear = new Date().getFullYear()
-        const preventLetters = (e) => {
-            if (e.which < 48 || e.which > 57 || e.target.value.length > 3) {
-                e.preventDefault()
-            }
-        }
+
         return (
             <div className="inputs" key={id} onChange={(e) => changeEducation(e, id)}>
                 <input

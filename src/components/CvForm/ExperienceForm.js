@@ -1,4 +1,5 @@
 import React from "react"
+import { preventLetters } from "../helpers"
 
 export default function ExperienceForm({
     experience,
@@ -9,11 +10,6 @@ export default function ExperienceForm({
     const experienceState = experience.map((experienceObj) => {
         const { id, jobStart, jobEnd, job, company, jobCity } = experienceObj
         const currentYear = new Date().getFullYear()
-        const preventLetters = (e) => {
-            if (e.which < 48 || e.which > 57 || e.target.value.length > 3) {
-                e.preventDefault()
-            }
-        }
 
         return (
             <div className="inputs" key={id} onChange={(e) => changeExperience(e, id)}>
