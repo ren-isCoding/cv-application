@@ -90,8 +90,11 @@ export let StyledCvCreator = styled.div`
     }
 
     .skill-li {
+        &:first-of-type {
+            margin-top: 2rem;
+        }
         margin-left: 1.5rem;
-        margin-bottom: 1.5rem;
+        margin-bottom: 1rem;
         position: relative;
     }
 
