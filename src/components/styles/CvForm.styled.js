@@ -84,6 +84,9 @@ export let StyledCvCreator = styled.div`
         &:hover {
             color: rgb(0, 190, 0);
         }
+        @media (max-width: 600px) {
+            font-size: 3vw;
+        }
     }
 
     .skill-li {
@@ -107,6 +110,9 @@ export let StyledCvCreator = styled.div`
     .other-options {
         display: flex;
         gap: 1rem;
+        @media (max-width: 600px) {
+            font-size: 3vw;
+        }
     }
 
     .create-pdf-btn:hover {
