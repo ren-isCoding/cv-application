@@ -7,41 +7,53 @@ export default function PersonalForm({ personal, changePersonal, changePhoto }) 
     return (
         <section>
             <h3>Personal Information</h3>
-            <div className="inputs" onChange={(e) => changePersonal(e)}>
+            <div className="inputs">
                 <input
-                    type="text"
                     placeholder="First name"
                     name="fName"
                     maxLength={15}
-                    defaultValue={fName}
+                    value={fName}
+                    onChange={(e) => changePersonal(e)}
                 />
                 <input
                     placeholder="Last Name"
                     name="lName"
                     maxLength={15}
-                    defaultValue={lName}
+                    value={lName}
+                    onChange={(e) => changePersonal(e)}
                 />
                 <input
                     placeholder="Profession"
                     name="profession"
-                    defaultValue={profession}
+                    value={profession}
+                    onChange={(e) => changePersonal(e)}
                 />
-                <input placeholder="Email" name="email" defaultValue={email} />
                 <input
-                    type="text"
+                    placeholder="Email"
+                    name="email"
+                    value={email}
+                    onChange={(e) => changePersonal(e)}
+                />
+                <input
                     placeholder="Phone Number"
                     name="phoneNum"
                     maxLength={15}
-                    defaultValue={phoneNum}
+                    value={phoneNum}
                     onKeyPress={(e) => preventLetters(e)}
+                    onChange={(e) => changePersonal(e)}
                 />
-                <input placeholder="Description" name="desc" defaultValue={desc} />
-
+                <input
+                    placeholder="Description"
+                    name="desc"
+                    value={desc}
+                    onChange={(e) => changePersonal(e)}
+                />
                 <input
                     type="file"
                     id="file-upload"
                     name="photo"
                     onClick={(e) => changePhoto(e)}
+                    onChange={(e) => changePersonal(e)}
                 />
                 <label htmlFor="file-upload">Upload your photo</label>
             </div>
