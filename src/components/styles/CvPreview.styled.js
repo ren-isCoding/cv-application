@@ -21,10 +21,13 @@ export let StyledCvPreview = styled.div`
         width: 100%;
         min-width: 100%;
     }
-    @media (max-width: 500px) {
+    @media (max-width: 800px) {
         font-size: 1.2rem;
         h1 {
-            font-size: 0.5rem;
+            font-size: 7vw !important;
+        }
+        header span {
+            font-size: 4vw !important;
         }
     }
 
@@ -33,6 +36,7 @@ export let StyledCvPreview = styled.div`
         color: whitesmoke;
         padding: 3rem;
         grid-column: 1/ -1;
+        overflow: hidden;
 
         div {
             display: flex;
