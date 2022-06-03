@@ -139,6 +139,8 @@ const Main = () => {
 
     const handleAddSkill = (e, value) => {
         e.preventDefault()
+        e.target.reset()
+        if (!value) return
         setCv((prevState) => ({
             ...prevState,
             skills: [...prevState.skills, { id: uuidv4(), name: value }],
