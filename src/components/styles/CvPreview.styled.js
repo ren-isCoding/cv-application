@@ -22,7 +22,8 @@ export let StyledCvPreview = styled.div`
         min-width: 100%;
     }
     @media (max-width: 800px) {
-        font-size: 1.2rem;
+        font-size: 2vw;
+        height: 100%;
         h1 {
             font-size: 7vw !important;
         }
@@ -84,6 +85,9 @@ export let StyledCvPreview = styled.div`
     }
 
     .info-date {
+        @media (max-width: 600px) {
+            width: 0rem;
+        }
         width: 14rem;
         min-width: 11rem;
         font-weight: bold;
@@ -115,5 +119,9 @@ export let StyledCvPreview = styled.div`
         display: flex;
         flex-direction: column;
         gap: 1rem;
+    }
+
+    @media print {
+        font-size: 1.7rem;
     }
 `
