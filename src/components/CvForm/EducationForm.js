@@ -1,5 +1,4 @@
 import React from "react"
-import { preventLetters } from "../helpers"
 
 export default function EducationForm({
     education,
@@ -19,8 +18,8 @@ export default function EducationForm({
                     max={currentYear}
                     placeholder="From (year)"
                     name="schoolStart"
+                    maxLength={10}
                     defaultValue={schoolStart}
-                    onKeyPress={(e) => preventLetters(e)}
                 />
                 <input
                     type="number"
@@ -28,8 +27,8 @@ export default function EducationForm({
                     max={currentYear}
                     placeholder="To (year)"
                     name="schoolEnd"
+                    maxLength={10}
                     defaultValue={schoolEnd}
-                    onKeyPress={(e) => preventLetters(e)}
                 />
                 <input placeholder="School" name="school" defaultValue={school} />
                 <input placeholder="City" name="schoolCity" defaultValue={schoolCity} />

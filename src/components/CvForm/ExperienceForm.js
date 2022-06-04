@@ -1,5 +1,4 @@
 import React from "react"
-import { preventLetters } from "../helpers"
 
 export default function ExperienceForm({
     experience,
@@ -19,8 +18,8 @@ export default function ExperienceForm({
                     max={currentYear}
                     placeholder="From (year)"
                     name="jobStart"
+                    maxLength={10}
                     defaultValue={jobStart}
-                    onKeyPress={(e) => preventLetters(e)}
                 />
                 <input
                     type="number"
@@ -28,8 +27,8 @@ export default function ExperienceForm({
                     max={currentYear}
                     placeholder="To (year)"
                     name="jobEnd"
+                    maxLength={10}
                     defaultValue={jobEnd}
-                    onKeyPress={(e) => preventLetters(e)}
                 />
                 <input placeholder="Job profession" name="job" defaultValue={job} />
                 <input placeholder="Company name" name="company" defaultValue={company} />

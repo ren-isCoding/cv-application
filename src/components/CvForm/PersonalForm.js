@@ -25,6 +25,7 @@ export default function PersonalForm({ personal, changePersonal, changePhoto }) 
                 <input
                     placeholder="Profession"
                     name="profession"
+                    maxLength={30}
                     value={profession}
                     onChange={(e) => changePersonal(e)}
                 />
