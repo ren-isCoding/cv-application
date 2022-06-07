@@ -1,12 +1,12 @@
 {
   "files": {
-    "main.js": "/cv-application/static/js/main.ded19153.js",
-    "static/media/examplePhoto.png": "/cv-application/static/media/examplePhoto.2850ee21fc94b1206d64.png",
-    "static/media/defaultPhoto.png": "/cv-application/static/media/defaultPhoto.90dc751e8e8e5557d629.png",
-    "index.html": "/cv-application/index.html",
-    "main.ded19153.js.map": "/cv-application/static/js/main.ded19153.js.map"
+    "main.js": "/Cv-Application/static/js/main.479f281a.js",
+    "static/media/examplePhoto.png": "/Cv-Application/static/media/examplePhoto.2850ee21fc94b1206d64.png",
+    "static/media/defaultPhoto.png": "/Cv-Application/static/media/defaultPhoto.90dc751e8e8e5557d629.png",
+    "index.html": "/Cv-Application/index.html",
+    "main.479f281a.js.map": "/Cv-Application/static/js/main.479f281a.js.map"
   },
   "entrypoints": [
-    "static/js/main.ded19153.js"
+    "static/js/main.479f281a.js"
   ]
 }
