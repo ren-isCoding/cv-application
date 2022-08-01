@@ -1,6 +1,6 @@
 This is a react app which lets the user make a CV resume using a premade template and then create a PDF.
 
-<a href='https://ren-isCoding.github.io/Cv-Application'>Click here to see the app</a>
+<a href='https://ren-isCoding.github.io/cv-application'>Click here to see the app</a>
 
 # Getting Started with Create React App
 
