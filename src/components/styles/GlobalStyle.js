@@ -52,6 +52,10 @@ const GlobalStyle = createGlobalStyle`
   button {
     cursor: pointer;
   }
+  * {
+  scrollbar-width: thin;
+  scrollbar-color: rgb(49, 49, 49) whitesmoke;
+}
 `
 
 export default GlobalStyle
