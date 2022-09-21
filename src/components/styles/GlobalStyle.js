@@ -54,7 +54,7 @@ const GlobalStyle = createGlobalStyle`
   }
   * {
   scrollbar-width: thin;
-  scrollbar-color: rgb(49, 49, 49) whitesmoke;
+  scrollbar-color: #363636 #5aa4b2 ;
 }
 `
 
